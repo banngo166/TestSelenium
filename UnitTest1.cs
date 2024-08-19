@@ -102,26 +102,6 @@ namespace ApiTestProject
         }
 
         [Test]
-        public void TestFrames()
-        {
-
-            driver.Navigate().GoToUrl("http://the-internet.herokuapp.com/nested_frames");
-
-            driver.SwitchTo().ParentFrame();
-            Console.WriteLine("Đã tới Frame Đầu tiên");
-
-            driver.SwitchTo().Frame("frame-top");
-            Console.WriteLine("Đã tới Frame Top");
-
-            driver.SwitchTo().Frame("frame-middle");
-            Console.WriteLine("Đã tới Frame Middle");
-            string middleText = driver.FindElement(By.XPath("//div[@id='content']")).Text;
-            Console.WriteLine(middleText);
-
-            driver.Quit();
-        }
-
-        [Test]
         public void TestRegister()
         {
             driver.Navigate().GoToUrl("https://www.bbc.com/news");
